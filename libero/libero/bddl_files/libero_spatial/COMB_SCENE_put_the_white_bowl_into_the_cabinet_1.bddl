@@ -1,0 +1,103 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language Put the white bowl into the cabinet)
+    (:regions
+      (akita_black_bowl_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.025 -0.025 0.025 0.025)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (white_cabinet_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.1078228484232083 -0.24303795377166945 0.1678228484232083 -0.18303795377166945)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (ketchup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.2186056722185069 0.03088070186681085 -0.16860567221850692 0.08088070186681084)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (wooden_shelf_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.011989789318616412 0.08366020457128708 0.048010210681383586 0.1436602045712871)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (top_side
+          (:target white_cabinet_1)
+      )
+      (top_region
+          (:target white_cabinet_1)
+      )
+      (middle_region
+          (:target white_cabinet_1)
+      )
+      (bottom_region
+          (:target white_cabinet_1)
+      )
+      (top_side
+          (:target wooden_shelf_1)
+      )
+      (top_region
+          (:target wooden_shelf_1)
+      )
+      (middle_region
+          (:target wooden_shelf_1)
+      )
+      (bottom_region
+          (:target wooden_shelf_1)
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+    white_cabinet_1 - white_cabinet
+    wooden_shelf_1 - wooden_shelf
+  )
+
+  (:objects
+    akita_black_bowl_1 - akita_black_bowl
+    milk_1 - milk
+    ketchup_1 - ketchup
+  )
+
+  (:obj_of_interest
+    akita_black_bowl_1
+  )
+
+  (:init
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region)
+    (On white_cabinet_1 kitchen_table_white_cabinet_1_region)
+    (On milk_1 white_cabinet_1_top_region)
+    (On ketchup_1 kitchen_table_ketchup_1_region)
+    (On wooden_shelf_1 kitchen_table_wooden_shelf_1_region)
+  )
+
+  (:goal
+    (And (On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region))
+  )
+
+)

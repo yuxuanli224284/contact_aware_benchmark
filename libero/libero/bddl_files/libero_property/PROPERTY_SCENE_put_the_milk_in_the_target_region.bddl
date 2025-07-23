@@ -1,0 +1,77 @@
+(define (problem LIBERO_Kitchen_Tabletop_Manipulation)
+  (:domain robosuite)
+  (:language Put the milk in the target region)
+    (:regions
+      (akita_black_bowl_init_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.025 0.27499999999999997 0.025 0.325)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (plate_0_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.10556930347019369 0.11413624162069436 0.15556930347019368 0.16413624162069435)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (alphabet_soup_1_region
+          (:target kitchen_table)
+          (:ranges (
+              (0.20057463868948305 0.2530239052347552 0.25057463868948304 0.30302390523475525)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+      (butter_2_region
+          (:target kitchen_table)
+          (:ranges (
+              (-0.17924400418673997 0.2277378736494093 -0.12924400418673998 0.27773787364940933)
+            )
+          )
+          (:yaw_rotation (
+              (0.0 0.0)
+            )
+          )
+      )
+    )
+
+  (:fixtures
+    kitchen_table - kitchen_table
+  )
+
+  (:objects
+    akita_black_bowl_1 - akita_black_bowl
+    plate_1 - plate
+    alphabet_soup_1 - alphabet_soup
+    butter_1 - butter
+  )
+
+  (:obj_of_interest
+    akita_black_bowl_1
+  )
+
+  (:init
+    (On akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region)
+    (On plate_1 kitchen_table_plate_0_region)
+    (On alphabet_soup_1 kitchen_table_alphabet_soup_1_region)
+    (On butter_1 kitchen_table_butter_2_region)
+  )
+
+  (:goal
+    (And (In akita_black_bowl_1 kitchen_table_akita_black_bowl_init_region))
+  )
+
+)
