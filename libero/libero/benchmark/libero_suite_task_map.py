@@ -11,7 +11,7 @@ libero_task_map = {
         "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate",
         'COMB_SCENE_put_the_white_bowl_into_the_cabinet',
         "OBSTACLE_SCENE_put_the_milk_in_the_target_region",
-        "SPACIAL_SCENE_put_the_white_bowl_into_the_cabinet",
+        "SPATIAL_SCENE_put_the_white_bowl_into_the_cabinet",
         "PROPERTY_SCENE_put_the_milk_in_the_target_region",
         
         
